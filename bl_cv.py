@@ -3,122 +3,12 @@ from streamlit_timeline import timeline
 from pathlib import Path
 import pandas as pd
 import os
+from cv_css import cv_css
 
 
 # Set up the page configuration
 st.set_page_config(page_title='CV Boris Labuda' ,layout="wide",page_icon='👧🏻')
-st.markdown("""
-    <style>
-        .fixed-banner {
-            top: 0px;
-            left: 0;
-            right: 0;
-            height: 150px;
-            background-color: #e3613e;
-            color: white;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: normal;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            align-items: center;
-            justify-content: left;
-            padding: 20px;
-            z-index: 1000;
-        }
-        .content {
-            margin-top: 70px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .big-font {
-            font-size: 40px !important;
-            font-weight: normal;
-            line-height: 0.5;
-            color: white;
-        }
-        .tight-font {
-            font-weight: normal;
-            padding: 0px;
-            font-size: 25px !important;
-            margin: 0px;
-            line-height: 0.5;
-        }
-        body {
-            font-family: ""Helvetica Neue", Helvetica, Arial, sans-serif";
-            color: #333;
-        }
-        hd1 {
-            font-family: ""Helvetica Neue", Helvetica, Arial, sans-serif";
-            color: #2E8B57;
-        }
-        hd2 {
-            font-family: ""Helvetica Neue", Helvetica, Arial, sans-serif";
-        }
-        hd3 {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .custom-title {
-            font-size: 36px;
-            color: navy;
-            font-weight: bold;
-        }
-        html, body, [class*="css"]  {
-             line-height: 1;
-        }
-        ul.modern-list {
-        list-style: none;
-        padding: 0;
-        font-size: 15px;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        ul.modern-list li {
-            background: white;
-            margin: 8px 0;
-            padding: 10px 14px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: all 0.2s ease-in-out;
-        }
-        ul.modern-list li:hover {
-            background: #e0e4ea;
-            transform: translateX(4px);
-        }
-        p.modern-text {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 1em;
-        max-width: 700px;
-        text-align: justify;
-        }
-        .contact-style a {
-            all: unset;
-            cursor: pointer;
-            font-weight: 500;
-            color: white;
-        }
-        .contact-style a:hover {
-            color: salmon;
-            text-decoration: underline;
-        }
-        .vis-timeline {
-            font-family: 'Segoe UI', sans-serif !important;
-            font-size: 14px;
-        }
-        .skill-badge {
-            display: inline-block;
-            background-color: #e3e3e3;
-            border: 0.5px solid silver;
-            color: #333;
-            border-radius: 20px;
-            padding: 5px 8px;
-            margin: 14px 6px 14px 0;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-    </style>
-    </style>
-""", unsafe_allow_html=True)
+st.markdown(cv_css, unsafe_allow_html=True)
 
 
 CURRENT_DIR = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -127,11 +17,11 @@ RESUME_FILE = CURRENT_DIR / "resume.pdf"
 
 #Header
 st.markdown("""<div class="fixed-banner">
-            <p class='big-font'>Ing. Boris Labuda</p><br/>
-            <p class='tight-font'>Experience summary</p><br/>
+            <p class='big-font'>Boris Labuda</p>
+            <p class='tight-font' style='line-height: 0.2; color: gainsboro;'>Experience summary</p><br/><br/>
             <p class="contact-style">
-                📍 Martin, SK |
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a> |
+                📍 <a href="#">Martin, SK</a><br/>
+                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
             </p>
             </div>""",unsafe_allow_html=True)
@@ -140,34 +30,39 @@ st.markdown("""<div class="fixed-banner">
 # Contact Information
 st.markdown('<div class="content">', unsafe_allow_html=True)
 st.markdown("<p></p>",unsafe_allow_html=True)
-st.markdown("<p style='font-size: 26px;'><em>Shortly about me  ...</em></p>",unsafe_allow_html=True)
-
+st.markdown("<p style='font-size: 26px;'><em>Shortly about me  ...</em></p><br/></div>",unsafe_allow_html=True) 
+st.markdown("<div class='step-container'>",unsafe_allow_html=True)
 hc1,hc2,hc3 = st.columns([1,1,1])
 with hc1:
-    st.markdown(""" <div style="background-color: #efefef; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'>I have dedicated my professional career to ECCO Shoes, 
+    st.markdown(""" <div class='step'><p class='modern-text'>I have dedicated my professional career to ECCO Shoes, 
                 where over the past 23 years I’ve combined my technical expertise with a deep understanding of business operations. 
-                My experience encompasses a broad range of areas, including <span style="color: #e3613e;">RPA development, IT management, SAP support, production processes</span> and supporting them with suitable software solutions.</p></div>
+                My experience encompasses a broad range of areas, including <span style="color: #e3613e;">RPA development, IT management, SAP support, production processes</span> and supporting them with suitable software solutions.</p>
+                 <div class="timeline-circle">1</div>
+                 </div>
 """,unsafe_allow_html=True)
-    st.markdown("""<div style="background-color: #f5f5f5; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'><span style="color: #e3613e;">Currently, I design and implement scalable automation solutions using Blue Prism</span>.
+    st.markdown("""<div class='step'><p class='modern-text'><span style="color: #e3613e;">Currently, I design and implement scalable automation solutions using Blue Prism</span>.
                 I work closely with business stakeholders to identify automation opportunities and mentor junior developers on RPA best practices. <br/>Throughtout this time <span style="color: #e3613e;">I have developed custom scheduling and reporting Blue Prism solution, which enabled our team to save significant time and resources
                 on BP operations</span> by introducing dynamic scheduling and resource assignment.
                 I have background in .NET WPF and ASP.NET development, and recently expanding my skill set through Python to extend and integrate automations with APIs and data pipelines. 
                 My ability to adapt and modernize legacy systems with current technologies can add real value in hybrid environments.</p>
-    </div>
+                 <div class="timeline-circle">2</div>
+                </div>
     """,unsafe_allow_html=True)
 with hc2:
-    st.markdown("""<div style="background-color: #e1e1e1; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'><span style="color: #e3613e;">Previously, I led ECCO Slovakia’s IT team for 9 years</span>, managing infrastructure, vendor relations, and user support for 200+ employees. 
+    st.markdown("""<div class='step'><p class='modern-text'><span style="color: #e3613e;">Previously, I led ECCO Slovakia’s IT team for 9 years</span>, managing infrastructure, vendor relations, and user support for 200+ employees. 
                 My earlier roles in SAP PP/WM support and production planning gave me a practical foundation in manufacturing and supply chain systems.
             💡 I’m passionate about streamlining processes, bridging technical and business teams, and delivering long-term, maintainable solutions.
                 </p>
+                <div class="timeline-circle">3</div>
                 </div>
 """,unsafe_allow_html=True)
-    st.markdown("""<div style="background-color: #e1e1e1; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'>I am a married father of two living in Martin, Slovakia.
+    st.markdown("""<div class='step'><p class='modern-text'>I am a married father of two living in Martin, Slovakia.
                 In my free time I'm spending quality time with my family, I enjoy hiking in the beautiful Slovak mountains, and I love exploring new technologies. To relax, I often read books, watch a good movie, or play video games with my kids.
                 </p>
+                <div class="timeline-circle">4</div>
                 </div>
 """,unsafe_allow_html=True)
-
+st.markdown("</div>", unsafe_allow_html=True)
 
 # with open(RESUME_FILE, "rb") as pdf_file:
 #     PDFbyte = pdf_file.read()
@@ -176,14 +71,13 @@ st.divider()
 # Timeline
 #timeline
 with st.container():
-
     # load data
     with open('example.json', "r") as f:
         data = f.read()
 
     # render timeline
     timeline(data, height=500,)
-    st.write("Current dir contents:", os.listdir())
+    #st.write("Current dir contents:", os.listdir())
 st.divider()
 with st.container():
     
@@ -196,7 +90,6 @@ with st.container():
         base_path = os.path.dirname(os.path.abspath(__file__))
         csv_path = os.path.join(base_path, 'Skills.csv')
         df_skills = pd.read_csv(csv_path,header=0,sep=';')  # Adjust the path to your CSV file
-        st.write(csv_path)
         df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
         areas = df_skills['Area'].unique().tolist()
         selected_areas = st.multiselect(label='Pick skill areas:',
@@ -208,7 +101,7 @@ with st.container():
                 st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
                 styled_list = "<ul class='modern-list'>"
                 for row in df.iterrows():
-                    styled_list+= f"<li class='skill-badge'><span style='color: #e3613e; font-size:10px'>{row[1]['Category']}</span> / {row[1]['Skill']}</li>"
+                    styled_list+= f"<li class='skill-badge'><span style='color: #e3613e; font-size:10px; font-weight:bold'>{row[1]['Category']}</span> {row[1]['Skill']}</li>"
                 styled_list+="</ul>"
                 st.markdown(styled_list, unsafe_allow_html=True)
                 st.divider()
