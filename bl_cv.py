@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_timeline import timeline
 from pathlib import Path
 import pandas as pd
+import os
 
 
 # Set up the page configuration
@@ -29,7 +30,7 @@ st.markdown("""
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         .big-font {
-            font-size: 50px !important;
+            font-size: 40px !important;
             font-weight: normal;
             line-height: 0.5;
             color: white;
@@ -107,10 +108,11 @@ st.markdown("""
         .skill-badge {
             display: inline-block;
             background-color: #e3e3e3;
+            border: 0.5px solid silver;
             color: #333;
             border-radius: 20px;
-            padding: 5px 12px;
-            margin: 4px 6px 4px 0;
+            padding: 5px 8px;
+            margin: 14px 6px 14px 0;
             font-size: 0.9em;
             font-weight: 500;
         }
@@ -191,8 +193,10 @@ with st.container():
         st.markdown("<h2 class='hd1'> 💼 Skills</h2>",unsafe_allow_html=True)
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
-        skill_file = CURRENT_DIR / 'skills.csv'
-        df_skills = pd.read_csv(skill_file,header=0,sep=';')  # Adjust the path to your CSV file
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        csv_path = os.path.join(base_path, 'skills.csv')
+        df_skills = pd.read_csv(csv_path,header=0,sep=';')  # Adjust the path to your CSV file
+        st.write(csv_path)
         df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
         areas = df_skills['Area'].unique().tolist()
         selected_areas = st.multiselect(label='Pick skill areas:',
