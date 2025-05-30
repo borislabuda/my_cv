@@ -1,0 +1,304 @@
+
+{
+    "title": {
+        "media": {
+          "url": "",
+          "caption": " <a target=\"_blank\" href=''>credits</a>",
+          "credit": ""
+        },
+        "text": {
+          "headline": "Welcome to<br>My time line",
+          "text": "<p>My working skills and experiences</p>"
+        }
+    },
+    "events": [
+      {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2002",
+          "month":"11",
+          "day":"25"
+        },
+        "end_date": {
+          "year": "2003",
+          "month":"12",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#47b35e'>Production planner at Ecco Slovakia, a. s.</span>",
+          "text": "<p>Started my career as a production planner in a shoe factory. I was responsible for planning the production schedule, managing resources, and ensuring timely delivery of products.</p>"
+        }
+      },
+      {
+        "media": {
+          "url": "",
+          "caption": "Position change "
+        },
+        "start_date": {
+          "year": "2003",
+          "month":"12",
+          "day":"1"
+        },
+        "end_date": {
+          "year": "2004",
+          "month":"10",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#3993b4'>SAP Master data specialist / Production master data</span>",
+          "text": "<p>After a year, I transitioned to a role focused on SAP master data management. I was responsible for maintaining and updating production-related master data in the SAP system.</p>"
+        }
+      },
+      {
+        "media": {
+          "url": "",
+          "caption": "" 
+        },
+        "start_date": {
+          "year": "2004",
+          "month":"10"
+        },
+        "end_date": {
+          "year": "2004",
+          "month":"10",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#a52828'>Moving to IT department</span>",
+          "text": "<p>In 2004, I made a career shift by moving to the IT department. This transition allowed me to leverage my production knowledge in IT projects.</p>"
+        }
+      },
+      {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2004",
+          "month":"10"
+        },
+        "end_date": {
+          "year": "2006",
+          "month":"08",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#3079bf'>SAP Support</span>",
+          "text": "<p>For following 2 years I was responsible for routings, production versions, and production orders in SAP and supporting business users in Production/Planning module.</p>"
+        }
+      },
+            {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2006",
+          "month":"06"
+        },
+        "end_date": {
+          "year": "2010",
+          "month":"08",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#d37b23'>IT infrastructure projects - HyperV, MSSQL, Cisco</span>",
+          "text": "During this time I started to work on IT infrastructure projects including implementation of Hyper-V, maintenance of SQL servers and managing on-site network resources"
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": "SAP re-implementation"
+        },
+        "start_date": {
+          "year": "2008",
+          "month":"06"
+        },
+        "end_date": {
+          "year": "2009",
+          "month":"12",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#0b84e9'>SAP re-implementation / Super user role for PP and WM modules</span>",
+          "text": " <p>In 2008, I took on the role of 'super user' for the SAP PP and WM modules during a major re-implementation project.</p>"
+        }
+      },
+            {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2010",
+          "month":"9"
+        },
+        "end_date": {
+          "year": "2019",
+          "month":"09",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#9b142d'>IT department manager</span>",
+          "text": "<p>In 2010, I was promoted to IT department manager responsible for overseeing the IT infrastructure, local app development, and user support.</p><p>Responsibilities:</p><p>-server and network infrastructure</p><p>-business projects support</p><p>-introduction of new technologies</p><p>-local application development</p><p>-user support</p><p>-IT budget management</p><p>-team management</p><p>-project management</p><p>-vendor management</p><p>-IT security</p>",
+          "group": "Management" 
+        }
+      },
+      {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2012",
+          "month":"04"
+        },
+        "end_date": {
+          "year": "2012",
+          "month":"08",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#c95e72'>Telephone switchboard project</span>",
+          "text": "<p>Led the project for upgrading the telephone switchboard system to Alcatel solution .</p>"
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2012",
+          "month":"08"
+        },
+        "end_date": {
+          "year": "2013",
+          "month":"04",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#c0599c'>ASP.NET Intranet website</span>",
+          "text": "<p>Developed an intranet website using ASP.NET</p><p> supporting internal communication, reporting, business process control and document management.</p>"
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2014",
+          "month":"07"
+        },
+        "end_date": {
+          "year": "2019",
+          "month":"10",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#915b5b'>Electronic distribution system project</span>",
+          "text": "<p>Project manager and front-end developer for JIT distribution of materials to production lines.</p><p>Project team developed own logic and distribution timing<p>- multiple .NET WPF apps for matterial ordering and material requirements visualization</p><p>- integration with SAP system</p><p>- integration with RFID readers and BC scanners</p>"
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2014",
+          "month":"06"
+        },
+        "end_date": {
+          "year": "2014",
+          "month":"10",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#ce5a5a'>Clean agent fire suppression system</span>",
+          "text": "Installation of clean agent fire suppression system in local data center. This project involved planning, installation, and testing of the fire suppression system to ensure the safety of IT infrastructure."
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2019",
+          "month":"10"
+        },
+        "end_date": {
+          "year": "2025",
+          "month":"08",
+          "day":"31"
+        },
+        "text": {
+          "headline": "<span style='color:#67a85d'>Senior RPA developer</span>",
+          "text": "<p>As a Senior RPA developer, I was responsible for designing and implementing Blue Prism robotic process automation solutions.</p><p>Responsibilities:</p><p>-Analyzing business processes and identifying automation opportunities</p><p>-Developing and deploying RPA solutions using Blue Prism</p><p>-Collaborating with business stakeholders to gather requirements</p><p>-Providing support and maintenance for existing RPA solutions</p><p>-Training and mentoring junior developers</p><p>-Managing Blue Prism infrastructure</p>"
+        }
+      },
+       {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2023",
+          "month":"02"
+        },
+        "end_date": {
+          "year": "2024",
+          "month":"06",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#3d9b2f'>Custom ecosystem for Blue Prism operations</span>",
+          "text": "<p>-solution includes reporting app, custom automation scheduler and robot services</p><p>-dynamic scheduling of automations</p><p>-dynamic resource pool sizing</p><p>-resulting in aprox. 60% license costs</p>"
+        }
+      },
+            {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2004",
+          "month":"10"
+        },
+        "end_date": {
+          "year": "2004",
+          "month":"10",
+          "day":"1"
+        },
+        "text": {
+          "headline": "",
+          "text": ""
+        }
+      },
+      {
+        "media": {
+          "url": "",
+          "caption": ""
+        },
+        "start_date": {
+          "year": "2024",
+          "month":"01"
+        },
+        "end_date": {
+          "year": "2025",
+          "month":"08",
+          "day":"1"
+        },
+        "text": {
+          "headline": "<span style='color:#e9b81e'>Adopting Python and AI</span>",
+          "text": "<p>In 2024, I began exploring Python and its applications in AI and machine learning.</p><p>This involved:</p><p>- Taking online courses to learn Python programming</p><p>- Experimenting with Open AI and Azure Open AI libraries </p><p>- Working on personal projects to apply my knowledge</p>"
+        }
+      }
+    ]
+}
