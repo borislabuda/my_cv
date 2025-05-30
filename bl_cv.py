@@ -194,7 +194,7 @@ with st.container():
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
         base_path = os.path.dirname(os.path.abspath(__file__))
-        csv_path = os.path.join(base_path, 'skills.csv')
+        csv_path = os.path.join(base_path, 'Skills.csv')
         df_skills = pd.read_csv(csv_path,header=0,sep=';')  # Adjust the path to your CSV file
         st.write(csv_path)
         df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
