@@ -183,7 +183,7 @@ with st.container():
 
     # render timeline
     timeline(data, height=500,)
-
+    st.write("Current dir contents:", os.listdir())
 st.divider()
 with st.container():
     
