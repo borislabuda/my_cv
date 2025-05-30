@@ -13,7 +13,7 @@ st.markdown("""
             top: 0px;
             left: 0;
             right: 0;
-            height: 150px;
+            height: 200px;
             background-color: #e3613e;
             color: white;
             border-radius: 25px;
@@ -95,6 +95,7 @@ st.markdown("""
             all: unset;
             cursor: pointer;
             font-weight: 500;
+            line-height: 1.5;
             color: white;
         }
         .contact-style a:hover {
@@ -130,8 +131,8 @@ st.markdown("""<div class="fixed-banner">
             <p class='big-font'>Ing. Boris Labuda</p><br/>
             <p class='tight-font'>Experience summary</p><br/>
             <p class="contact-style">
-                📍 Martin, SK |
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a> |
+                📍 <a href="#">Martin, SK</a><br/>
+                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
             </p>
             </div>""",unsafe_allow_html=True)
@@ -176,14 +177,13 @@ st.divider()
 # Timeline
 #timeline
 with st.container():
-
     # load data
     with open('example.json', "r") as f:
         data = f.read()
 
     # render timeline
     timeline(data, height=500,)
-    st.write("Current dir contents:", os.listdir())
+    #st.write("Current dir contents:", os.listdir())
 st.divider()
 with st.container():
     
