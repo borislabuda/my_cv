@@ -9,13 +9,13 @@ st.set_page_config(page_title='CV Boris Labuda' ,layout="wide",page_icon='👧�
 st.markdown("""
     <style>
         .fixed-banner {
-            position: fixed;
-            top: 60px;
+            top: 0px;
             left: 0;
             right: 0;
             height: 150px;
             background-color: #e3613e;
             color: white;
+            border-radius: 25px;
             font-size: 18px;
             font-weight: normal;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,14 +23,13 @@ st.markdown("""
             justify-content: left;
             padding: 20px;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .content {
             margin-top: 70px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         .big-font {
-            font-size: 65px !important;
+            font-size: 50px !important;
             font-weight: normal;
             line-height: 0.5;
             color: white;
@@ -105,6 +104,16 @@ st.markdown("""
             font-family: 'Segoe UI', sans-serif !important;
             font-size: 14px;
         }
+        .skill-badge {
+            display: inline-block;
+            background-color: #e3e3e3;
+            color: #333;
+            border-radius: 20px;
+            padding: 5px 12px;
+            margin: 4px 6px 4px 0;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
     </style>
     </style>
 """, unsafe_allow_html=True)
@@ -117,7 +126,7 @@ RESUME_FILE = CURRENT_DIR / "resume.pdf"
 #Header
 st.markdown("""<div class="fixed-banner">
             <p class='big-font'>Ing. Boris Labuda</p><br/>
-            <p class='tight-font'>Process automation senior developer</p><br/>
+            <p class='tight-font'>Experience summary</p><br/>
             <p class="contact-style">
                 📍 Martin, SK |
                 📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a> |
@@ -128,33 +137,41 @@ st.markdown("""<div class="fixed-banner">
 
 # Contact Information
 st.markdown('<div class="content">', unsafe_allow_html=True)
-
 st.markdown("<p></p>",unsafe_allow_html=True)
-st.header("🧑‍💼 Profile")
+st.markdown("<p style='font-size: 26px;'><em>Shortly about me  ...</em></p>",unsafe_allow_html=True)
 
 hc1,hc2,hc3 = st.columns([1,1,1])
 with hc1:
-    st.markdown(""" <div style="background-color: #efefef; padding: 20px; border-radius: 12px;"><p class='modern-text'>I'm a <span style="color: #e3613e;">Process Automation Senior Developer</span> with over 20 years of experience at ECCO Shoes, blending hands-on technical skills with a deep understanding of business operations. 
-                My career spans <em>RPA development, IT management, SAP support, and custom software solutions.</em></p></div>
+    st.markdown(""" <div style="background-color: #efefef; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'>I have dedicated my professional career to ECCO Shoes, 
+                where over the past 23 years I’ve combined my technical expertise with a deep understanding of business operations. 
+                My experience encompasses a broad range of areas, including <span style="color: #e3613e;">RPA development, IT management, SAP support, production processes</span> and supporting them with suitable software solutions.</p></div>
 """,unsafe_allow_html=True)
-with hc2:
-    st.markdown("""<div style="background-color: #f5f5f5; padding: 20px; border-radius: 12px;"><p class='modern-text'>Currently, I design and implement scalable automation solutions using Blue Prism, including a custom-built scheduling and reporting platform that cut license costs by 50%. 
-                I work closely with business stakeholders to identify automation opportunities and mentor junior developers on RPA best practices.
-                I have a solid background in .NET WPF and ASP.NET development, and recently expanded my skill set through Python training — now using Python to extend and integrate automations with APIs and data pipelines. 
-                My ability to adapt and modernize legacy systems with current technologies adds real value in hybrid environments.</p>
+    st.markdown("""<div style="background-color: #f5f5f5; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'><span style="color: #e3613e;">Currently, I design and implement scalable automation solutions using Blue Prism</span>.
+                I work closely with business stakeholders to identify automation opportunities and mentor junior developers on RPA best practices. <br/>Throughtout this time <span style="color: #e3613e;">I have developed custom scheduling and reporting Blue Prism solution, which enabled our team to save significant time and resources
+                on BP operations</span> by introducing dynamic scheduling and resource assignment.
+                I have background in .NET WPF and ASP.NET development, and recently expanding my skill set through Python to extend and integrate automations with APIs and data pipelines. 
+                My ability to adapt and modernize legacy systems with current technologies can add real value in hybrid environments.</p>
     </div>
     """,unsafe_allow_html=True)
-with hc3:
-    st.markdown("""<div style="background-color: #e1e1e1; padding: 20px; border-radius: 12px;"><p class='modern-text'>Previously, I led ECCO Slovakia’s IT team, managing infrastructure, vendor relations, and user support for 200+ employees. 
+with hc2:
+    st.markdown("""<div style="background-color: #e1e1e1; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'><span style="color: #e3613e;">Previously, I led ECCO Slovakia’s IT team for 9 years</span>, managing infrastructure, vendor relations, and user support for 200+ employees. 
                 My earlier roles in SAP PP/WM support and production planning gave me a practical foundation in manufacturing and supply chain systems.
             💡 I’m passionate about streamlining processes, bridging technical and business teams, and delivering long-term, maintainable solutions.
                 </p>
                 </div>
 """,unsafe_allow_html=True)
+    st.markdown("""<div style="background-color: #e1e1e1; padding: 20px; border-radius: 12px; margin:20px"><p class='modern-text'>I am a married father of two living in Martin, Slovakia.
+                In my free time I'm spending quality time with my family, I enjoy hiking in the beautiful Slovak mountains, and I love exploring new technologies. To relax, I often read books, watch a good movie, or play video games with my kids.
+                </p>
+                </div>
+""",unsafe_allow_html=True)
+
+
 # with open(RESUME_FILE, "rb") as pdf_file:
 #     PDFbyte = pdf_file.read()
 # st.download_button(label="📥 Download Resume", data=PDFbyte, file_name="Boris_Labuda_Resume.pdf", mime="application/pdf")
-
+st.divider()
+# Timeline
 #timeline
 with st.container():
 
@@ -172,7 +189,6 @@ with st.container():
     with col1:
         # Skills
         st.markdown("<h2 class='hd1'> 💼 Skills</h2>",unsafe_allow_html=True)
-        st.divider()
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
         df_skills = pd.read_csv('skills.csv',header=0,sep=';')  # Adjust the path to your CSV file
@@ -183,130 +199,113 @@ with st.container():
                                         )
         if selected_areas:
             
+            def render_skills(df: pd.DataFrame, title: str):
+                st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
+                styled_list = "<ul class='modern-list'>"
+                for row in df.iterrows():
+                    styled_list+= f"<li class='skill-badge'><span style='color: #e3613e; font-size:10px'>{row[1]['Category']}</span> / {row[1]['Skill']}</li>"
+                styled_list+="</ul>"
+                st.markdown(styled_list, unsafe_allow_html=True)
+                st.divider()
+            
             filtered_df = df_skills[df_skills['Area'].isin(selected_areas)]
-            st.dataframe(
-        filtered_df.reset_index(drop=True).style.format(na_rep='-')
+            filtered_df.reset_index(drop=True).style.format(na_rep='-')
+            render_skills(filtered_df, title="Selected Skills"
     )
         else:
             st.write("Please select at least one skill area to display.")
+        
 
     #=============================================================================================
     with col2:
         # ----- EXPERIENCE -----
-        st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>",unsafe_allow_html=True)
-        st.divider()
-        # region -----------Automation developer | Ecco Shoes-------------------
-        st.markdown("<h3 style='color: #e3613e'>Process automation senior developer | Ecco Shoes",unsafe_allow_html=True)
-        st.caption("Oct 2019 – Present")
-        lst_automation = [
-            "Development of automated solutions in Blue Prism.",
-            "Management of Blue Prism infrastructure.",
-            "Development of custom Blue Prism scheduler and reporting app / license cost savings of 50%.",
-            "Collaboration with business stakeholders to identify automation opportunities.",
-            "Mentoring junior developers in RPA best practices."
-        ]
-        styled_list = "<ul class='modern-list'>"
-        styled_list += "".join([f"<li>{skill}</li>" for skill in lst_automation])
-        styled_list += "</ul>"
-        st.markdown(styled_list, unsafe_allow_html=True)
-      # end region ---------------------------------------------------------------------------------
-      # region ------------------IT manager | Ecco Slovakia-------------------
-        st.markdown("<h3 style='color: #e3613e'>IT manager| Ecco Slovakia</h3>",unsafe_allow_html=True)
-        st.caption("Jun 2010 – Sep 2019")
-        lst_itman = [
-            "Led a team of 4 IT specialists.",
-            "IT infrastructure management.",
-            "Support for 200+ users.",
-            "Budget management.",
-            "Projects management.",
-            "User cecurity management.",
-            "Vendor and asset management.",
-            "Local app development / VB.NET WinForms, ASP.NET, WPF."
-        ]
-        styled_list = "<ul class='modern-list'>"
-        styled_list += "".join([f"<li>{skill}</li>" for skill in lst_itman])
-        styled_list += "</ul>"
-        st.markdown(styled_list, unsafe_allow_html=True)
-        st.markdown("""
-        """)     
-        # endregion----------------------------------------------------------------------------------
-        # region ------------------SAP / IT specialist | Ecco Slovakia-------------------
-        st.markdown("<h3 style='color: #e3613e'>SAP / IT specialist | Ecco Slovakia</h3>",unsafe_allow_html=True)
-        st.caption("<p style='line-height: 0.2;'>Jun 2006 – Aug 2010</p>",unsafe_allow_html=True)
-        lst_itspec = [
-            "SAP PP and WM user support.",
-            "SAP PP and WM master data maintenance.",
-            "General IT user support."
-        ]
-        styled_list = "<ul class='modern-list'>"
-        styled_list += "".join([f"<li>{skill}</li>" for skill in lst_itspec])
-        styled_list += "</ul>"
-        st.markdown(styled_list, unsafe_allow_html=True)
-        # endregion----------------------------------------------------------------------------------
-        # region ------------------SAP PP - master data specialist | Ecco Slovakia-------------------
-        st.markdown("<h3 style='color: #e3613e'>SAP PP - master data specialist  | Ecco Slovakia</h3>",unsafe_allow_html=True)
-        st.caption("<p style='line-height: 0.2;'>Oct 2004 – Jun 2006</p>",unsafe_allow_html=True)
-        lst_md = [
-            "SAP PP master data maintenance.",
-            "SAP PP user support."
-        ]
-        styled_list = "<ul class='modern-list'>"
-        styled_list += "".join([f"<li>{skill}</li>" for skill in lst_md])
-        styled_list += "</ul>"
-        st.markdown(styled_list, unsafe_allow_html=True)
-        # endregion----------------------------------------------------------------------------------
-        #------------------Production planner  | Ecco Slovakia-------------------
-        st.markdown("<h3 style='color: #e3613e'>Production planner  | Ecco Slovakia</h3>",unsafe_allow_html=True)
-        st.caption("<p style='line-height: 0.2;'>Nov 2002 – Oct 2004</p>",unsafe_allow_html=True)
-        lst_plan = [
-            "Planning shoe production schedule.",
+        st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>", unsafe_allow_html=True)
+
+        def render_experience(title, company, period, items):
+            st.markdown(f"<h3 style='color: #e3613e'>{title} | {company}</h3>", unsafe_allow_html=True)
+            st.caption(f"{period}")
+            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
+            st.markdown(styled_list, unsafe_allow_html=True)
+
+        # --- Roles ---
+        render_experience(
+            "Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present",
+            [
+                "Development of automated solutions in Blue Prism.",
+                "Management of Blue Prism infrastructure.",
+                "Development of custom Blue Prism scheduler and reporting app / license cost savings of 50%.",
+                "Collaboration with business stakeholders to identify automation opportunities.",
+                "Mentoring junior developers in RPA best practices."
+            ]
+        )
+
+        render_experience(
+            "IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",
+            [
+                "Led a team of 4 IT specialists.",
+                "IT infrastructure management.",
+                "Support for 200+ users.",
+                "Budget management.",
+                "Projects management.",
+                "User security management.",
+                "Vendor and asset management.",
+                "Local app development / VB.NET WinForms, ASP.NET, WPF."
+            ]
+        )
+
+        render_experience(
+            "SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",
+            [
+                "SAP PP and WM user support.",
+                "SAP PP and WM master data maintenance.",
+                "General IT user support."
+            ]
+        )
+
+        render_experience(
+            "SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",
+            [
+                "SAP PP master data maintenance.",
+                "SAP PP user support."
+            ]
+        )
+
+        render_experience(
+            "Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",
+            [
+                "Planning shoe production schedule.",
             "Reporting and production follow-up."
         ]
-        styled_list = "<ul class='modern-list'>"
-        styled_list += "".join([f"<li>{skill}</li>" for skill in lst_plan])
-        styled_list += "</ul>"
-        st.markdown(styled_list, unsafe_allow_html=True)
-    #=============================================================================================
+    )
+        #=============================================================================================
     with col3:
-        st.markdown("<h2 class='hd1'> 📚 Education</h2>",unsafe_allow_html=True)
-        st.divider()
-        # Škola 1 – Vysoká škola
-        
+        st.markdown("<h2 class='hd1'> 📚 Education</h2>", unsafe_allow_html=True)
+
+        def render_section(title, items):
+            st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
+            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
+            st.markdown(styled_list, unsafe_allow_html=True)
+            st.divider()
+
+        # Data lists
+        lst_cert = [
+            "Blue Prism Developer Certification",
+            "2020"
+        ]
+
         lst_college = [
             "Inžiniersky titul, Prevádzka a ekonomika železničnej dopravy",
             "Žilinská univerzita v Žiline",
             "09/1997 – 06/2002"
         ]
-        
+
         lst_mid = [
             "Gymnázium V. P. Tótha, Martin",
             "Maturita, všeobecné štúdium",
             "09/1993 – 06/1997"
         ]
-        
-        styled_list_college = "<ul class='modern-list'>"        
-        #certifikácia
-        lst_cert = [
-            "Blue Prism Developer Certification",
-            "2020"
-        ]
-        
-        st.markdown("<h3 style='color: #e3613e'>Certifikácia</h3>",unsafe_allow_html=True)
-        styled_list_cert = "<ul class='modern-list'>"
-        styled_list_cert += "".join([f"<li>{cert}</li>" for cert in lst_cert])
-        styled_list_cert += "</ul>"
-        st.markdown(styled_list_cert, unsafe_allow_html=True)
-        st.divider()
-        st.markdown("<h3 style='color: #e3613e'>Vysoká škola</h3>",unsafe_allow_html=True)
-        styled_list_college = "<ul class='modern-list'>"
-        styled_list_college += "".join([f"<li>{item}</li>" for item in lst_college])
-        styled_list_college += "</ul>"
-        st.markdown(styled_list_college, unsafe_allow_html=True)
-        st.divider()
-        st.markdown("<h3 style='color: #e3613e'>Stredná škola</h3>",unsafe_allow_html=True)
-        styled_list_mid = "<ul class='modern-list'>"
-        styled_list_mid += "".join([f"<li>{item}</li>" for item in lst_mid])
-        styled_list_mid += "</ul>"
-        st.markdown(styled_list_mid, unsafe_allow_html=True)
-    
-    st.markdown("</div>", unsafe_allow_html=True)
+
+        # Render sections
+        render_section("Certifikácia", lst_cert)
+        render_section("Vysoká škola", lst_college)
+        render_section("Stredná škola", lst_mid)

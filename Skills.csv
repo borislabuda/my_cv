@@ -1,23 +1,23 @@
-﻿Area;Category;Skill
-App Development;Front-End;WinForms
-App Development;Front-End;WPF
-App Development;Front-End;ASP.NET
-App Development;Front-End;StreamLit
-App Development;Back-End;VB.NET
-App Development;Back-End;Python
-App Development;Back-End;MSSQL/SQLite
-App Development;Back-End;C#
-App Development;Back-End;HTML/CSS
-IT specialist/managment;Management;IT budgeting
-IT specialist/managment;Management;Vendor management
-IT specialist/managment;Specialist;User support
-IT specialist/managment;Management;Assett management
-IT specialist/managment;Specialist;Local application development
-Process Automation;Blue Prism;Development of automations
-Process Automation;Blue Prism;Integrating automations with external tools and platforms
-Process Automation;Blue Prism;Management and maintenance of Blue Prism environment
-Process Automation;Blue Prism;Own Blue Prism solution for scheduling and reporting
-SAP Specialist;PP;Routings
-SAP Specialist;PP;Production versions
-SAP Specialist;PP;General user support
-SAP Specialist;WM;General user support
+﻿Area;Category;Skill;;;;;;;;;
+App Development;DEV;WinForms;;;;;;;;;
+App Development;DEV;WPF;;;;;;;;;
+App Development;DEV;ASP.NET;;;;;;;;;
+App Development;DEV;StreamLit;;;;;;;;;
+App Development;DEV;VB.NET;;;;;;;;;
+App Development;DEV;Python;;;;;;;;;
+App Development;DEV;MSSQL/SQLite;;;;;;;;;
+App Development;DEV;C#;;;;;;;;;
+App Development;DEV;HTML/CSS;;;;;;;;;
+IT specialist/managment;IT;IT budgeting;;;;;;;;;
+IT specialist/managment;IT;Vendor management;;;;;;;;;
+IT specialist/managment;IT;User support;;;;;;;;;
+IT specialist/managment;IT;Assett management;;;;;;;;;
+IT specialist/managment;IT;Local application development;;;;;;;;;
+Process Automation;BP;Development of automations;;;;;;;;;
+Process Automation;BP;Blue Prism integration;;;;;;;;;
+Process Automation;BP;blue Prism env. Management;;;;;;;;;
+Process Automation;BP;Blue Prism dynamic scheduler;;;;;;;;;
+SAP Specialist;SAP;Routings;;;;;;;;;
+SAP Specialist;SAP;Production versions;;;;;;;;;
+SAP Specialist;SAP;General user support WM;;;;;;;;;
+SAP Specialist;SAP;General user support PP;;;;;;;;;
