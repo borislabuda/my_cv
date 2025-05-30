@@ -191,7 +191,8 @@ with st.container():
         st.markdown("<h2 class='hd1'> 💼 Skills</h2>",unsafe_allow_html=True)
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
-        df_skills = pd.read_csv(CURRENT_DIR / 'skills.csv',header=0,sep=';')  # Adjust the path to your CSV file
+        skill_file = CURRENT_DIR / 'skills.csv'
+        df_skills = pd.read_csv(skill_file,header=0,sep=';')  # Adjust the path to your CSV file
         df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
         areas = df_skills['Area'].unique().tolist()
         selected_areas = st.multiselect(label='Pick skill areas:',
