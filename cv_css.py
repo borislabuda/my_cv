@@ -63,7 +63,7 @@ cv_css = """
         }
         ul.modern-list li {
             margin: 8px 0;
-            padding: 10px 14px;
+            padding: 4px 14px;
             border-radius: 12px;
             transition: all 0.2s ease-in-out;
         }
@@ -74,7 +74,7 @@ cv_css = """
         p.modern-text {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.3;
             margin-bottom: 1em;
             max-width: 700px;
             text-align: justify;
@@ -96,9 +96,10 @@ cv_css = """
         }
         .skill-badge {
             display: inline-block;
+            line-height: 1.5;
             border: 0.5px solid silver;
             border-radius: 20px;
-            padding: 5px 8px;
+            padding: 5px 5px;
             margin: 14px 6px 14px 0;
             font-size: 0.9em;
             font-weight: 500;
@@ -155,7 +156,7 @@ cv_css = """
             padding: 15px;  
             border-left: 5px solid #f26c3f;
             border-radius: 5px;
-            margin: 0px 0px 40px 0px;
+            margin: 0px 0px 20px 0px;
         }
 
         .step:nth-child(1) { animation-delay: 0s; }
