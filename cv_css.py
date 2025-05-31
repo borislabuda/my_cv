@@ -121,16 +121,18 @@ cv_css = """
         .timeline-circle {
         position: absolute;
         text-align: center;
+        padding: 10px 20px;
         top: -20px;
         left: -20px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        width: auto;
+        height: 30px;
+        border-radius: 45%;
         background: #f26c3f;
         color: white;
-        line-height: 40px;
+        line-height: 15px;
         margin: 0 auto 10px;
         font-weight: bold;
+        font-style: italic;
         }
 
         svg {

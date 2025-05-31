@@ -37,7 +37,7 @@ with hc1:
     st.markdown(""" <div class='step'><p class='modern-text'>I have dedicated my professional career to ECCO Shoes, 
                 where over the past 23 years I’ve combined my technical expertise with a deep understanding of business operations. 
                 My experience encompasses a broad range of areas, including <span style="color: #e3613e;">RPA development, IT management, SAP support, production processes</span> and supporting them with suitable software solutions.</p>
-                 <div class="timeline-circle">1</div>
+                 <div class="timeline-circle">Wrap Up ... </div>
                  </div>
 """,unsafe_allow_html=True)
     st.markdown("""<div class='step'><p class='modern-text'><span style="color: #e3613e;">Currently, I design and implement scalable automation solutions using Blue Prism</span>.
@@ -45,7 +45,7 @@ with hc1:
                 on BP operations</span> by introducing dynamic scheduling and resource assignment.
                 I have background in .NET WPF and ASP.NET development, and recently expanding my skill set through Python to extend and integrate automations with APIs and data pipelines. 
                 My ability to adapt and modernize legacy systems with current technologies can add real value in hybrid environments.</p>
-                 <div class="timeline-circle">2</div>
+                 <div class="timeline-circle">At this time ...</div>
                 </div>
     """,unsafe_allow_html=True)
 with hc2:
@@ -53,13 +53,13 @@ with hc2:
                 My earlier roles in SAP PP/WM support and production planning gave me a practical foundation in manufacturing and supply chain systems.
             💡 I’m passionate about streamlining processes, bridging technical and business teams, and delivering long-term, maintainable solutions.
                 </p>
-                <div class="timeline-circle">3</div>
+                <div class="timeline-circle">Before ...</div>
                 </div>
 """,unsafe_allow_html=True)
     st.markdown("""<div class='step'><p class='modern-text'>I am a married father of two living in Martin, Slovakia.
                 In my free time I'm spending quality time with my family, I enjoy hiking in the beautiful Slovak mountains, and I love exploring new technologies. To relax, I often read books, watch a good movie, or play video games with my kids.
                 </p>
-                <div class="timeline-circle">4</div>
+                <div class="timeline-circle">Personally I ...</div>
                 </div>
 """,unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
