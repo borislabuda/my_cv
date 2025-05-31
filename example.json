@@ -144,7 +144,7 @@
         },
         "text": {
           "headline": "<span style='color:#9b142d'>IT department manager</span>",
-          "text": "<p>In 2010, I was promoted to IT department manager responsible for overseeing the IT infrastructure, local app development, and user support.</p><p>Responsibilities:</p><p>-server and network infrastructure</p><p>-business projects support</p><p>-introduction of new technologies</p><p>-local application development</p><p>-user support</p><p>-IT budget management</p><p>-team management</p><p>-project management</p><p>-vendor management</p><p>-IT security</p>",
+          "text": "<p>In 2010, I was promoted to IT department manager responsible for overseeing the IT infrastructure, local app development, and user+pruduction support.</p><p>Responsibilities:</p><p>-server and network infrastructure</p><p>-business projects support</p><p>-introduction of new technologies</p><p>-local application development</p><p>-user support</p><p>-IT budget management</p><p>-team management</p><p>-project management</p><p>-vendor management</p><p>-IT security</p>",
           "group": "Management" 
         }
       },
@@ -164,7 +164,7 @@
         },
         "text": {
           "headline": "<span style='color:#c95e72'>Telephone switchboard project</span>",
-          "text": "<p>Led the project for upgrading the telephone switchboard system to Alcatel solution .</p>"
+          "text": "<p>Led the project for upgrading legacy telephone switchboard system to new Alcatel solution .</p>"
         }
       },
        {

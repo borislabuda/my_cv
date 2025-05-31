@@ -85,7 +85,7 @@ with st.container():
     col1,col2,col3 = st.columns(3)
     with col1:
         # Skills
-        st.markdown("<h2 class='hd1'> 💼 Skills</h2>",unsafe_allow_html=True)
+        st.markdown("<h2 class='hd1'> 💡 Skills</h2>",unsafe_allow_html=True)
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
         base_path = os.path.dirname(os.path.abspath(__file__))

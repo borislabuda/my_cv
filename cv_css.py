@@ -97,9 +97,7 @@ cv_css = """
         }
         .skill-badge {
             display: inline-block;
-            background-color: #e3e3e3;
             border: 0.5px solid silver;
-            color: #333;
             border-radius: 20px;
             padding: 5px 8px;
             margin: 14px 6px 14px 0;
