@@ -117,7 +117,7 @@ with st.container():
     with col2:
         # ----- EXPERIENCE -----
         st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>", unsafe_allow_html=True)
-        df_exp = pd.read_csv('Experience.csv',header=0,sep=';')
+        df_exp = pd.read_csv('experience.csv',header=0,sep=';')
         def render_experience(title, company, period):
             exp_list = df_exp[df_exp['category'] == title]['item'].tolist()
             st.markdown(f"<h3 style='color: #e3613e'>{title} | {company}</h3>", unsafe_allow_html=True)
