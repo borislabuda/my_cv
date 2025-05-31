@@ -4,7 +4,7 @@ cv_css = """
             top: 0px;
             left: 0;
             right: 0;
-            height: 220px;
+            height: 150px;
             background: linear-gradient(135deg, #f26c3f, #f4a261);
             color: white;
             border-radius: 40px 40px 0px 0px;
@@ -63,13 +63,15 @@ cv_css = """
         }
         ul.modern-list li {
             margin: 8px 0;
+            z-index: 1;
             padding: 4px 14px;
             border-radius: 12px;
             transition: all 0.2s ease-in-out;
         }
         ul.modern-list li:hover {
             background: #e0e4ea;
-            transform: translateX(4px);
+            z-index: 1000;    
+            transform: translateX(4px) scale(1.1);
         }
         p.modern-text {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -84,10 +86,10 @@ cv_css = """
             cursor: pointer;
             font-weight: 500;
             line-height: 1.5;
-            color: white;
+            color: gainsboro;
         }
         .contact-style a:hover {
-            color: #f26c3f;
+            color: white;
             text-decoration: underline;
         }
         .vis-timeline {

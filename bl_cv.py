@@ -22,9 +22,10 @@ st.markdown("""<div class="fixed-banner">
             <p class='big-font'>Boris Labuda</p>
             <p class='tight-font' style='line-height: 0.2; color: gainsboro;'>Experience summary</p><br/><br/>
             <p class="contact-style">
-                📍 <a href="#">Martin, SK</a><br/>
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
+                📍 <a href="#">Martin, SK</a>
+                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a>
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
+                    <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"/> <a href="https://github.com/borislabuda" target="_blank">GitHub</a>
             </p>
             </div>""",unsafe_allow_html=True)
 
@@ -56,25 +57,39 @@ def render_experience(title: str, company: str, period: str, expanded: bool):
         styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in exp_list) + "</ul>"
         st.markdown(styled_list, unsafe_allow_html=True)
 
-ch1,ch2 = st.columns([1,1])
+ch1,ch2,ch3 = st.columns([1,0.1,1])
 
 with ch1:
     #experience markup
-    st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 class='hd1'> 📑 Work Experience</h2>", unsafe_allow_html=True)
     render_experience("Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present",expanded=True)
     render_experience("IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",expanded=True)
     render_experience("SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",expanded=True)
     render_experience("SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",expanded=False)
     render_experience("Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",expanded=False)
-   
 #===============================================================================================
-with ch2:
+with ch2: # separator column
+    st.markdown(
+        """
+        <div></div>
+        """,
+        unsafe_allow_html=True
+    )
+#===============================================================================================
+with ch3:
+    
     # ==================== Projects Section ====================
+    st.markdown(
+        """
+        <div style="height: 100%; width: 1px; background-color: #ccc; margin: auto;"></div>
+        """,
+        unsafe_allow_html=True
+    )
     # Load projects data
     df_prj = pd.read_csv('projects.csv', header=0, sep=';')
 
     # Section title
-    st.markdown("<h2 class='hd1'> 💼 Projects</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 class='hd1'> 🚩 Projects</h2>", unsafe_allow_html=True)
 
     # Get unique project areas for selection
     project_areas = df_prj['area'].unique().tolist()

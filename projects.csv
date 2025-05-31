@@ -2,9 +2,10 @@ area;project;description
 Blue Prism;Dynamic scheduling and resource assignment;Custom scheduling of automations in Blue prism dynamically assigning available resources and launching schedules with mnimal delay. Solution consists of desktop app (VB.NET/WPF), scheduling service and worker services (VB.NET/WinService). Solution brought license costs savings of 40%.-50%
 Blue Prism;Production shoe costing;Blue Prism automation for shoe costing in SAP integration BP, desktop app for work load management and MSSSQL for serving the output data to business. Solution made on global scale for 7 units in Asian and Europian regions, savings of 20 manhours / week / unit.
 Blue Prism;Other automations;Developed 20+ other automated solutions
-Python;Shoe costing data chatbot;currently in development, chatbot app for querying SQL data with natural language input / Python, Azure Open AI, LangChain, MSSQL, Streamlit
+Python;Shoe costing data chatbot;Currently in development, chatbot app for querying SQL data with natural language input / Python, Azure Open AI, LangChain, MSSQL, Streamlit
+Python;Shoe costing data chatbot;Multiple experimental projects on my GitHub related to AI agents and data visualization.
 .NET development;Pruduction figures visualization;Multiple apps based on VB.NET / WPF to visualize production performance and efficiency of production processes.
-.NET development;ASP.NET intranet site;Site for extended reporting, document management and communication / VB.NET, ASP.NET, MSSQL, SAP(ERPConnect)
+.NET development;ASP.NET intranet site;Web site for extended reporting, document management and communication / VB.NET, ASP.NET, MSSQL, SAP(ERPConnect)
 .NET development;Electronic didstribtion system;Solution for planning material requirements and supplying production lines JIT / VB.NET, WPF, MSSQL, SAP(ERPConnect)
 .NET development;Warehouse sorting ramps;Desktop app managing shoe sorting conveyors in warehouse using optical scanners and PLC connection / VB.NET, WPF
 .NET development;Other .NET apps ;Other 10+ .NET apps for visualization and reporting
