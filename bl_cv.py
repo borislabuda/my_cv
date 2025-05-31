@@ -29,121 +29,172 @@ st.markdown("""<div class="fixed-banner">
             </div>""",unsafe_allow_html=True)
 
 
-# Contact Information
-st.markdown('<div class="content">', unsafe_allow_html=True)
-st.markdown("<p></p>",unsafe_allow_html=True)
-st.markdown("<div class='step-container'>",unsafe_allow_html=True)
+#================================================================================================
 # ----- EXPERIENCE -----
-
 df_exp = pd.read_csv('experience.csv',header=0,sep=';')
-def render_experience(title, company, period):
+def render_experience(title: str, company: str, period: str, expanded: bool):
+    """
+    Render a single work experience block with an expandable list of items.
+
+    Args:
+        title (str): Job title/category.
+        company (str): Company name.
+        period (str): Employment period.
+    """
+    # Filter experience items by category (job title)
     exp_list = df_exp[df_exp['category'] == title]['item'].tolist()
-    st.markdown(f"<div style='color: #e3613e' class='step'>{title} | {company}<div>", unsafe_allow_html=True)
-    st.caption(f"{period}")
-    styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in exp_list) + "</ul>"
-    st.markdown(styled_list, unsafe_allow_html=True)
-    st.markdown("</div>",unsafe_allow_html=True)
-ch1,ch2 = st.columns(2)
+
+    # Display job title and company with styling
+    st.markdown(
+        f"<div style='color: #e3613e' class='step'>{title} | {company}</div>",
+        unsafe_allow_html=True
+    )
+    st.caption(period)
+
+    # Create an expander for the list of experience items
+    with st.expander("Show details",expanded=expanded):
+        styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in exp_list) + "</ul>"
+        st.markdown(styled_list, unsafe_allow_html=True)
 
 ch1,ch2 = st.columns([1,1])
-# --- Roles ---
+
 with ch1:
     #experience markup
     st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>", unsafe_allow_html=True)
-    render_experience("Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present")
-    render_experience("IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",)
-    render_experience("SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",)
-    render_experience("SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",)
-    render_experience("Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",)
+    render_experience("Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present",expanded=True)
+    render_experience("IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",expanded=True)
+    render_experience("SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",expanded=True)
+    render_experience("SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",expanded=False)
+    render_experience("Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",expanded=False)
    
-
+#===============================================================================================
 with ch2:
-   
-     #projects markup
-    df_prj = pd.read_csv('projects.csv',header=0,sep=';')
+    # ==================== Projects Section ====================
+    # Load projects data
+    df_prj = pd.read_csv('projects.csv', header=0, sep=';')
+
+    # Section title
     st.markdown("<h2 class='hd1'> 💼 Projects</h2>", unsafe_allow_html=True)
+
+    # Get unique project areas for selection
     project_areas = df_prj['area'].unique().tolist()
-    sel_proj_areas = st.multiselect(label='Pick project areas:', options=project_areas, default=project_areas, )
-    
-    if sel_proj_areas:
-        def render_proj(df: pd.DataFrame, title: str):
-                st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
-                styled_list = "<ul class='modern-list'>"
-                for row in df.iterrows():
-                    styled_list+= f"<li class='skill-badge'><span style='color: #e3613e; font-size:10px; font-weight:bold'>{row[1]['area']}/{row[1]['project']}</span><br/> {row[1]['description']}</li><br/>"
-                styled_list+="</ul>"
-                st.markdown(styled_list, unsafe_allow_html=True)
-                st.divider()
-            
-        fil_proj_df = df_prj[df_prj['area'].isin(sel_proj_areas)]
-        fil_proj_df.reset_index(drop=True).style.format(na_rep='-')
-        render_proj(fil_proj_df, title="Selected Projects")
-     # Skills
-        st.markdown("<h2 class='hd1'> 💡 Skills</h2>",unsafe_allow_html=True)
-        skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
-        # Load your skills CSV
-        base_path = os.path.dirname(os.path.abspath(__file__))
-        csv_path = os.path.join(base_path, 'skills.csv')
-        df_skills = pd.read_csv(csv_path,header=0,sep=';')  # Adjust the path to your CSV file
-        df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
-        areas = df_skills['Area'].unique().tolist()
-        selected_areas = st.multiselect(label='Pick skill areas:',
-                                        options=areas,
-                                        )
-        if selected_areas:
-            
-            def render_skills(df: pd.DataFrame, title: str):
-                st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
-                styled_list = "<ul class='modern-list'>"
-                for row in df.iterrows():
-                    styled_list+= f"<li class='skill-badge'><span style='color: #e3613e; font-size:10px; font-weight:bold'>{row[1]['Category']}</span> {row[1]['Skill']}</li>"
-                styled_list+="</ul>"
-                st.markdown(styled_list, unsafe_allow_html=True)
-                st.divider()
-            
-            filtered_df = df_skills[df_skills['Area'].isin(selected_areas)]
-            filtered_df.reset_index(drop=True).style.format(na_rep='-')
-            render_skills(filtered_df, title="Selected Skills"
+
+    # Multiselect widget for project areas
+    sel_proj_areas = st.multiselect(
+        label='Pick project areas:',
+        options=project_areas,
     )
-        else:
-            st.write("Please select at least one skill area to display.")
+
+    # Function to render projects list with custom HTML styling
+    def render_proj(df: pd.DataFrame, title: str):
+        st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
+        styled_list = "<ul class='modern-list'>"
+        for _, row in df.iterrows():
+            styled_list += (
+                f"<li class='skill-badge'>"
+                f"<span style='color: #e3613e; font-size:10px; font-weight:bold'>"
+                f"{row['area']}/{row['project']}</span><br/> {row['description']}</li><br/>"
+            )
+        styled_list += "</ul>"
+        st.markdown(styled_list, unsafe_allow_html=True)
+        st.divider()
+
+    # If any project areas are selected, filter and render projects
+    if sel_proj_areas:
+        filtered_projects = df_prj[df_prj['area'].isin(sel_proj_areas)].reset_index(drop=True)
+        render_proj(filtered_projects, title="Selected Projects")
+
+    # ==================== Skills Section ====================
+    st.markdown("<h2 class='hd1'> 💡 Skills</h2>", unsafe_allow_html=True)
+
+    # Load skills CSV relative to this script location
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(base_path, 'skills.csv')
+    df_skills = pd.read_csv(csv_path, header=0, sep=';')
+
+    # Remove rows where 'Area' is NaN
+    df_skills.dropna(subset=['Area'], inplace=True)
+
+    # Unique skill areas for selection
+    areas = df_skills['Area'].unique().tolist()
+
+    # Multiselect widget for skill areas
+    selected_areas = st.multiselect(
+        label='Pick skill areas:',
+        options=areas,
+    )
+
+    # Function to render skills list with custom HTML styling
+    def render_skills(df: pd.DataFrame, title: str):
+        st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
+        styled_list = "<ul class='modern-list'>"
+        for _, row in df.iterrows():
+            styled_list += (
+                f"<li class='skill-badge'>"
+                f"<span style='color: #e3613e; font-size:10px; font-weight:bold'>"
+                f"{row['Category']}</span> {row['Skill']}</li>"
+            )
+        styled_list += "</ul>"
+        st.markdown(styled_list, unsafe_allow_html=True)
+        st.divider()
+
+    # If any skill areas are selected, filter and render skills; else show prompt
+    if selected_areas:
+        filtered_skills = df_skills[df_skills['Area'].isin(selected_areas)].reset_index(drop=True)
+        render_skills(filtered_skills, title="Selected Skills")
+    else:
+        st.write("Please select at least one skill area to display.")
     #=============================================================================================
+   # ==================== Education Section ====================
+    st.markdown("<h2 class='hd1'> 📚 Education</h2>", unsafe_allow_html=True)
 
-        st.markdown("<h2 class='hd1'> 📚 Education</h2>", unsafe_allow_html=True)
+    def render_section(title, items):
+        """
+        Renders an education section with a title and a styled bullet list.
 
-        def render_section(title, items):
-            st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
-            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
-            st.markdown(styled_list, unsafe_allow_html=True)
+        Args:
+            title (str): The heading/title of the section.
+            items (list[str]): List of strings to display as list items.
+        """
+        # Section title with custom styling
+        st.markdown(f"<h3 style='color: #e3613e'>{title}</h3>", unsafe_allow_html=True)
 
-        # Data lists
-        lst_cert = [
-            "Blue Prism Developer Certification",
-            "2020"
-        ]
+        # Build a styled unordered list from the items
+        styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
 
-        lst_college = [
-            "Engineer degree, Operations and economics of railway transport",
-            "University of Žilina, Slovakia",
-            "09/1997 – 06/2002"
-        ]
+        # Render the list as markdown with HTML enabled
+        st.markdown(styled_list, unsafe_allow_html=True)
 
-        lst_mid = [
-            "Gymnasium V. P. Tóth, Martin",
-            "Graduation, general studies",
-            "09/1993 – 06/1997"
-        ]
+    # Define the content for each education subsection
+    lst_cert = [
+        "Blue Prism Developer Certification",
+        "2020"
+    ]
 
-        # Render sections
-        edu1,edu2,edu3 = st.columns([1,1,1])
-        with edu1:
-            render_section("Certification", lst_cert)
-        with edu2:
-            render_section("University degree", lst_college)
-        with edu3:
-            render_section("Secondary school", lst_mid)
+    lst_college = [
+        "Engineer degree, Operations and economics of railway transport",
+        "University of Žilina, Slovakia",
+        "09/1997 – 06/2002"
+    ]
 
-st.markdown("</div>", unsafe_allow_html=True)
+    lst_mid = [
+        "Gymnasium V. P. Tóth, Martin",
+        "Graduation, general studies",
+        "09/1993 – 06/1997"
+    ]
+
+    # Create three equal-width columns for side-by-side layout
+    edu1, edu2, edu3 = st.columns(3)
+
+    # Render each education subsection in its respective column
+    with edu1:
+        render_section("Certification", lst_cert)
+
+    with edu2:
+        render_section("University degree", lst_college)
+
+    with edu3:
+        render_section("Secondary school", lst_mid)
 
 # with open(RESUME_FILE, "rb") as pdf_file:
 #     PDFbyte = pdf_file.read()
