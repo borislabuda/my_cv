@@ -122,7 +122,7 @@ with st.container():
             exp_list = df_exp[df_exp['category'] == title]['item'].tolist()
             st.markdown(f"<h3 style='color: #e3613e'>{title} | {company}</h3>", unsafe_allow_html=True)
             st.caption(f"{period}")
-            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in exp_list) + "</ul>"
+            styled_list = "<ul class='modern-list'>" + "".join(f"<li>- {item}</li>" for item in exp_list) + "</ul>"
             st.markdown(styled_list, unsafe_allow_html=True)
         # --- Roles ---
         render_experience("Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present")

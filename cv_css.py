@@ -65,7 +65,6 @@ cv_css = """
             margin: 8px 0;
             padding: 10px 14px;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             transition: all 0.2s ease-in-out;
         }
         ul.modern-list li:hover {
