@@ -262,25 +262,6 @@
           "text": "<p>-solution includes reporting app, custom automation scheduler and robot services</p><p>-dynamic scheduling of automations</p><p>-dynamic resource pool sizing</p><p>-resulting in aprox. 60% license costs</p>"
         }
       },
-            {
-        "media": {
-          "url": "",
-          "caption": ""
-        },
-        "start_date": {
-          "year": "2004",
-          "month":"10"
-        },
-        "end_date": {
-          "year": "2004",
-          "month":"10",
-          "day":"1"
-        },
-        "text": {
-          "headline": "",
-          "text": ""
-        }
-      },
       {
         "media": {
           "url": "",

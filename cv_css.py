@@ -56,10 +56,10 @@ cv_css = """
              line-height: 1;
         }
         ul.modern-list {
-        list-style: none;
-        padding: 0;
-        font-size: 15px;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            list-style: none;
+            padding: 0;
+            font-size: 15px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         ul.modern-list li {
             margin: 8px 0;
@@ -72,12 +72,12 @@ cv_css = """
             transform: translateX(4px);
         }
         p.modern-text {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 1em;
-        max-width: 700px;
-        text-align: justify;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 1em;
+            max-width: 700px;
+            text-align: justify;
         }
         .contact-style a {
             all: unset;
@@ -105,57 +105,57 @@ cv_css = """
         }
         
         .timeline-step {
-        border: 1px solid #e3e3e3;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-        width: 700px;
-        margin: 0px 0px 20px 0px;
+            border: 1px solid #e3e3e3;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 700px;
+            margin: 0px 0px 20px 0px;
         }
 
         .timeline-circle {
-        position: absolute;
-        text-align: center;
-        padding: 10px 20px;
-        top: -20px;
-        left: -20px;
-        width: auto;
-        height: 30px;
-        border-radius: 45%;
-        background: #f26c3f;
-        color: white;
-        line-height: 15px;
-        margin: 0 auto 10px;
-        font-weight: bold;
-        font-style: italic;
+            position: absolute;
+            text-align: center;
+            padding: 10px 20px;
+            top: -20px;
+            left: -20px;
+            width: auto;
+            height: 30px;
+            border-radius: 45%;
+            background: #f26c3f;
+            color: white;
+            line-height: 15px;
+            margin: 0 auto 10px;
+            font-weight: bold;
+            font-style: italic;
         }
 
         svg {
-        position: absolute;
-        top: 20px;
-        left: 100px;
-        width: 100%;
-        height: 2px;
-        z-index: -1;
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            width: 100%;
+            height: 2px;
+            z-index: -1;
         }
         
         .step-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 300px;
-        margin: auto;
-        margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 300px;
+            margin: auto;
+            margin-top: 50px;
         }
 
         .step {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.6s forwards;
-        padding: 15px;  
-        border-left: 5px solid #f26c3f;
-        border-radius: 5px;
-        margin: 0px 0px 40px 0px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s forwards;
+            padding: 15px;  
+            border-left: 5px solid #f26c3f;
+            border-radius: 5px;
+            margin: 0px 0px 40px 0px;
         }
 
         .step:nth-child(1) { animation-delay: 0s; }

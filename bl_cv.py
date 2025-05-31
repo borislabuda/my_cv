@@ -3,6 +3,8 @@ from streamlit_timeline import timeline
 from pathlib import Path
 import pandas as pd
 import os
+from PIL import Image
+import base64
 from cv_css import cv_css
 
 
