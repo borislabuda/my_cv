@@ -89,7 +89,7 @@ with st.container():
         skills_areas = ['App Development', 'IT specialist/managment','Process Automation', 'SAP Specialist']
         # Load your skills CSV
         base_path = os.path.dirname(os.path.abspath(__file__))
-        csv_path = os.path.join(base_path, 'Skills.csv')
+        csv_path = os.path.join(base_path, 'skills.csv')
         df_skills = pd.read_csv(csv_path,header=0,sep=';')  # Adjust the path to your CSV file
         df_skills.dropna(subset='Area', inplace=True)  # Remove rows where 'Area' is NaN
         areas = df_skills['Area'].unique().tolist()
@@ -117,63 +117,19 @@ with st.container():
     with col2:
         # ----- EXPERIENCE -----
         st.markdown("<h2 class='hd1'> 💼 Work Experience</h2>", unsafe_allow_html=True)
-
-        def render_experience(title, company, period, items):
+        df_exp = pd.read_csv('Experience.csv',header=0,sep=';')
+        def render_experience(title, company, period):
+            exp_list = df_exp[df_exp['category'] == title]['item'].tolist()
             st.markdown(f"<h3 style='color: #e3613e'>{title} | {company}</h3>", unsafe_allow_html=True)
             st.caption(f"{period}")
-            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
+            styled_list = "<ul class='modern-list'>" + "".join(f"<li>{item}</li>" for item in exp_list) + "</ul>"
             st.markdown(styled_list, unsafe_allow_html=True)
-
         # --- Roles ---
-        render_experience(
-            "Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present",
-            [
-                "Development of automated solutions in Blue Prism.",
-                "Management of Blue Prism infrastructure.",
-                "Development of custom Blue Prism scheduler and reporting app / license cost savings of 50%.",
-                "Collaboration with business stakeholders to identify automation opportunities.",
-                "Mentoring junior developers in RPA best practices."
-            ]
-        )
-
-        render_experience(
-            "IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",
-            [
-                "Led a team of 4 IT specialists.",
-                "IT infrastructure management.",
-                "Support for 200+ users.",
-                "Budget management.",
-                "Projects management.",
-                "User security management.",
-                "Vendor and asset management.",
-                "Local app development / VB.NET WinForms, ASP.NET, WPF."
-            ]
-        )
-
-        render_experience(
-            "SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",
-            [
-                "SAP PP and WM user support.",
-                "SAP PP and WM master data maintenance.",
-                "General IT user support."
-            ]
-        )
-
-        render_experience(
-            "SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",
-            [
-                "SAP PP master data maintenance.",
-                "SAP PP user support."
-            ]
-        )
-
-        render_experience(
-            "Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",
-            [
-                "Planning shoe production schedule.",
-            "Reporting and production follow-up."
-        ]
-    )
+        render_experience("Process Automation Senior Developer", "Ecco Shoes", "Oct 2019 – Present")
+        render_experience("IT Manager", "Ecco Slovakia", "Jun 2010 – Sep 2019",)
+        render_experience("SAP / IT Specialist", "Ecco Slovakia", "Jun 2006 – Aug 2010",)
+        render_experience("SAP PP - Master Data Specialist", "Ecco Slovakia", "Oct 2004 – Jun 2006",)
+        render_experience("Production Planner", "Ecco Slovakia", "Nov 2002 – Oct 2004",)
         #=============================================================================================
     with col3:
         st.markdown("<h2 class='hd1'> 📚 Education</h2>", unsafe_allow_html=True)
@@ -203,6 +159,6 @@ with st.container():
         ]
 
         # Render sections
-        render_section("Certifikácia", lst_cert)
-        render_section("Vysoká škola", lst_college)
-        render_section("Stredná škola", lst_mid)
+        render_section("Certification", lst_cert)
+        render_section("University degree", lst_college)
+        render_section("Secondary school", lst_mid)

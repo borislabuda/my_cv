@@ -62,7 +62,6 @@ cv_css = """
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         ul.modern-list li {
-            background: white;
             margin: 8px 0;
             padding: 10px 14px;
             border-radius: 12px;
@@ -76,7 +75,6 @@ cv_css = """
         p.modern-text {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 16px;
-        color: #333;
         line-height: 1.6;
         margin-bottom: 1em;
         max-width: 700px;
@@ -158,7 +156,6 @@ cv_css = """
         transform: translateY(20px);
         animation: fadeIn 0.6s forwards;
         padding: 15px;  
-        background: white;
         border-left: 5px solid #f26c3f;
         border-radius: 5px;
         margin: 0px 0px 40px 0px;
