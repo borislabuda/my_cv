@@ -1,23 +1,23 @@
-﻿Area;Category;Skill;;;;;;;;;
-App Development;DEV;WinForms;;;;;;;;;
-App Development;DEV;WPF;;;;;;;;;
-App Development;DEV;ASP.NET;;;;;;;;;
-App Development;DEV;StreamLit;;;;;;;;;
-App Development;DEV;VB.NET;;;;;;;;;
-App Development;DEV;Python;;;;;;;;;
-App Development;DEV;MSSQL/SQLite;;;;;;;;;
-App Development;DEV;C#;;;;;;;;;
-App Development;DEV;HTML/CSS;;;;;;;;;
-IT specialist/managment;IT;IT budgeting;;;;;;;;;
-IT specialist/managment;IT;Vendor management;;;;;;;;;
-IT specialist/managment;IT;User support;;;;;;;;;
-IT specialist/managment;IT;Assett management;;;;;;;;;
-IT specialist/managment;IT;Local application development;;;;;;;;;
-Process Automation;BP;Development of automations;;;;;;;;;
-Process Automation;BP;Blue Prism integration;;;;;;;;;
-Process Automation;BP;blue Prism env. Management;;;;;;;;;
-Process Automation;BP;Blue Prism dynamic scheduler;;;;;;;;;
-SAP Specialist;SAP;Routings;;;;;;;;;
-SAP Specialist;SAP;Production versions;;;;;;;;;
-SAP Specialist;SAP;General user support WM;;;;;;;;;
-SAP Specialist;SAP;General user support PP;;;;;;;;;
+﻿Area;Category;Skill
+App Development;DEV;WinForms
+App Development;DEV;WPF
+App Development;DEV;ASP.NET
+App Development;DEV;StreamLit
+App Development;DEV;VB.NET
+App Development;DEV;Python
+App Development;DEV;MSSQL/SQLite
+App Development;DEV;C#
+App Development;DEV;HTML/CSS
+IT specialist/managment;IT;IT budgeting
+IT specialist/managment;IT;Vendor management
+IT specialist/managment;IT;User support
+IT specialist/managment;IT;Assett management
+IT specialist/managment;IT;Local application development
+Process Automation;PA;Process automation in Blue Prism
+Process Automation;PA;Blue Prism integration
+Process Automation;PA;Blue Prism env. management
+Process Automation;PA;Blue Prism dynamic scheduling
+SAP Specialist;SAP;Routings
+SAP Specialist;SAP;Production versions
+SAP Specialist;SAP;General user support WM
+SAP Specialist;SAP;General user support PP

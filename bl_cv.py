@@ -22,8 +22,6 @@ st.markdown("""<div class="fixed-banner">
             <p class="contact-style">
                 📍 <a href="#">Martin, SK</a><br/>
                 📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
-                📍 <a href="#">Martin, SK</a><br/>
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
             </p>
             </div>""",unsafe_allow_html=True)
