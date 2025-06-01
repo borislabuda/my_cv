@@ -4,7 +4,7 @@ cv_css = """
             top: 0px;
             left: 0;
             right: 0;
-            height: 150px;
+            height: 180px;
             background: linear-gradient(135deg, #f26c3f, #f4a261);
             color: white;
             border-radius: 40px 40px 0px 0px;
