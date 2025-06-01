@@ -26,7 +26,7 @@ st.markdown("""<div class="fixed-banner">
 with st.expander('Contact info', expanded=True):
     st.markdown('''<p class="contact-style">
                 📍 <a href="#">Martin, SK</a>
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a>
+                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
                     <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"/> <a href="https://github.com/borislabuda" target="_blank">GitHub</a>
                 </p>''', unsafe_allow_html=True)
