@@ -20,16 +20,16 @@ RESUME_FILE = CURRENT_DIR / "resume.pdf"
 #Header
 st.markdown("""<div class="fixed-banner">
             <p class='big-font'>Boris Labuda</p>
-            <p class='tight-font' style='line-height: 0.2; color: gainsboro;'>Experience summary</p><br/><br/>
-            <p class="contact-style">
-                📍 <a href="#">Martin, SK</a>
-                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a><br/>
-                🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
-                    <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"/> <a href="https://github.com/borislabuda" target="_blank">GitHub</a>
-            </p>
+            <p class='tight-font' style='line-height: 0.2; color: gainsboro;'>Experience summary</p>
             </div>""",unsafe_allow_html=True)
 
-
+with st.expander('Contact info', expanded=True):
+    st.markdown('''<p class="contact-style">
+                📍 <a href="#">Martin, SK</a>
+                📧 <a href="mailto:blabuda@gmail.com">blabuda@gmail.com</a>
+                🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
+                    <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"/> <a href="https://github.com/borislabuda" target="_blank">GitHub</a>
+                </p>''', unsafe_allow_html=True)
 #================================================================================================
 # ----- EXPERIENCE -----
 df_exp = pd.read_csv('experience.csv',header=0,sep=';')

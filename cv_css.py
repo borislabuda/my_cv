@@ -4,7 +4,7 @@ cv_css = """
             top: 0px;
             left: 0;
             right: 0;
-            height: 180px;
+            height: 130 px;
             background: linear-gradient(135deg, #f26c3f, #f4a261);
             color: white;
             border-radius: 40px 40px 0px 0px;
@@ -86,10 +86,10 @@ cv_css = """
             cursor: pointer;
             font-weight: 500;
             line-height: 1.5;
-            color: gainsboro;
+            color: dimgray;
         }
         .contact-style a:hover {
-            color: white;
+            color: salmon;
             text-decoration: underline;
         }
         .vis-timeline {
