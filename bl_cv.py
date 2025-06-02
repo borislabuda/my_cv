@@ -30,9 +30,12 @@ with st.expander('Contact info', expanded=True):
                 🔗 <a href="https://linkedin.com/in/boris-labuda-498a5273" target="_blank">LinkedIn</a>
                     <img src="https://github.com/favicon.ico" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"/> <a href="https://github.com/borislabuda" target="_blank">GitHub</a>
                 </p>''', unsafe_allow_html=True)
+    with open('bl_cv.pdf', "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    st.download_button(label="📥 Download Resume", data=PDFbyte, file_name="Boris_Labuda_Resume.pdf", mime="application/pdf")
 #================================================================================================
 # ----- EXPERIENCE -----
-df_exp = pd.read_csv('experience.csv',header=0,sep=';')
+df_exp = pd.read_csv('data/experience.csv',header=0,sep=';')
 def render_experience(title: str, company: str, period: str, expanded: bool):
     """
     Render a single work experience block with an expandable list of items.
@@ -86,7 +89,7 @@ with ch3:
         unsafe_allow_html=True
     )
     # Load projects data
-    df_prj = pd.read_csv('projects.csv', header=0, sep=';')
+    df_prj = pd.read_csv('data/projects.csv', header=0, sep=';')
 
     # Section title
     st.markdown("<h2 class='hd1'> 🚩 Projects</h2>", unsafe_allow_html=True)
@@ -124,7 +127,7 @@ with ch3:
 
     # Load skills CSV relative to this script location
     base_path = os.path.dirname(os.path.abspath(__file__))
-    csv_path = os.path.join(base_path, 'skills.csv')
+    csv_path = os.path.join(base_path, 'data/skills.csv')
     df_skills = pd.read_csv(csv_path, header=0, sep=';')
 
     # Remove rows where 'Area' is NaN
@@ -211,16 +214,14 @@ with ch3:
     with edu3:
         render_section("Secondary school", lst_mid)
 
-# with open(RESUME_FILE, "rb") as pdf_file:
-#     PDFbyte = pdf_file.read()
-# st.download_button(label="📥 Download Resume", data=PDFbyte, file_name="Boris_Labuda_Resume.pdf", mime="application/pdf")
+
 
 st.divider()
 
 # Timeline
 with st.container():
     # load data
-    with open('example.json', "r") as f:
+    with open('data/example.json', "r") as f:
         data = f.read()
 
     # render timeline
