@@ -32,7 +32,7 @@ with st.expander('Contact info', expanded=True):
                 </p>''', unsafe_allow_html=True)
     with open('bl_cv.pdf', "rb") as pdf_file:
         PDFbyte = pdf_file.read()
-    st.download_button(label="📥 Download Resume", data=PDFbyte, file_name="Boris_Labuda_Resume.pdf", mime="application/pdf")
+        st.download_button(label="📥 Download Resume", data=PDFbyte, file_name="Boris_Labuda_Resume.pdf", mime="application/pdf")
 #================================================================================================
 # ----- EXPERIENCE -----
 df_exp = pd.read_csv('data/experience.csv',header=0,sep=';')
